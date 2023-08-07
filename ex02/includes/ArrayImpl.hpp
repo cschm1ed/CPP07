@@ -15,9 +15,8 @@
 template<typename T>
 Array<T>::Array() {
 	std::cout << BLUE"Array default constructor called\n"R;
-	_array = new T[1];
-	_size = 1;
-	_array[0] = 0;
+	_array = new T[0];
+	_size = 0;
 }
 
 template<typename T>
@@ -77,6 +76,11 @@ T &Array<T>::operator[](unsigned int index) {
 
 template<typename T>
 unsigned int Array<T>::getSize() {
+	return _size;
+}
+
+template<typename T>
+unsigned int Array<T>::size() {
 	return _size;
 }
 

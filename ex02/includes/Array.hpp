@@ -36,6 +36,8 @@ public:
 
 	unsigned int getSize();
 
+	unsigned int size();
+
 	class AccessOutOfBoundsException : public std::exception {
 		const char *what() const _NOEXCEPT;
 	};

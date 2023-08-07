@@ -12,7 +12,6 @@
 
 #include <iter.hpp>
 #include <colors.hpp>
-#include <comp.hpp>
 #include <iostream>
 
 void printStringToUpper(std::string const &str) {
@@ -35,16 +34,16 @@ int main() {
 	void (*printPtrStr)(const std::string &) = ::print<std::string>;
 
 	std::cout << BLUE << "before:\n";
-	::iter(arr, 3, printPtrStr);
+	iter(arr, 3, printPtrStr);
 	std::cout << MAGENTA << "after:\n";
-	::iter(arr, 3, printStringToUpper);
+	iter(arr, 3, printStringToUpper);
 
 	std::cout << "------testing ints------\n";
 
 	int intArr[] = {1, 2, 3, 4, 5};
 	std::cout << BLUE << "before: \n";
 	void (*printPtrInt)(const int &) = ::print<int>;
-	::iter(intArr, 5, printPtrInt);
+	iter(intArr, 5, printPtrInt);
 	std::cout << MAGENTA << "after:\n";
-	::iter(intArr, 5, printPlus10);
+	iter(intArr, 5, printPlus10);
 }
